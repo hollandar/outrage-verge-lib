@@ -1,0 +1,5 @@
+copy:
+  - 
+    from: static/
+    glob: "**/*"
+    to: static/

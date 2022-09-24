@@ -1,0 +1,16 @@
+{
+  "name": "lib",
+  "version": "1.0.0",
+  "description": "See https://github.com/hollandar/outrage-verge for information of starting off with a new static site, using just HTML.",
+  "main": "index.js",
+  "scripts": {
+    "build":"npm run buildJs & npm run buildTypes",
+    "buildJs": "tsc -p ./static/js/tsconfig.json",
+    "buildTypes": "tsc -p ./static/js/tsconfig.json -d -outDir ./@types/ --emitDeclarationOnly"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.8.3"
+  }
+}
