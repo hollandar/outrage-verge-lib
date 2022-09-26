@@ -2,3 +2,4 @@ Panel: components/panel.c.html
 Card: components/card.c.html
 Banner: components/banner.c.html
 TwoUp: components/twoup.c.html
+PageSection: components/pagesection.c.html
