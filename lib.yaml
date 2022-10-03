@@ -1,5 +1,17 @@
 copy:
   - 
     from: static/
-    glob: "**/*"
+    glob: "**/*.css"
+    to: static/
+  - 
+    from: static/
+    glob: "**/*.js"
+    to: static/
+  - 
+    from: static/
+    glob: "**/*.ts"
+    to: static/
+  - 
+    from: static/
+    glob: "**/*.map"
     to: static/

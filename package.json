@@ -4,13 +4,17 @@
   "description": "See https://github.com/hollandar/outrage-verge for information of starting off with a new static site, using just HTML.",
   "main": "index.js",
   "scripts": {
-    "build":"npm run buildJs & npm run buildTypes",
-    "buildJs": "tsc -p ./static/js/tsconfig.json",
-    "buildTypes": "tsc -p ./static/js/tsconfig.json -d -outDir ./@types/ --emitDeclarationOnly"
+    "build": "npm run buildJs & npm run buildTypes & npm run buildSass",
+    "buildJs": "tsc -p ./static/lib/js/tsconfig.json",
+    "buildTypes": "tsc -p ./static/lib/js/tsconfig.json -d -outDir ./@types/ --emitDeclarationOnly",
+    "buildSass": "sass -I ./static/lib/css ./static/lib/css/lib.scss> ./static/lib/css/lib.css && cleancss -o ./static/lib/css/lib.min.css ./static/lib/css/lib.css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "clean-css": "^5.3.1",
+    "clean-css-cli": "^5.6.1",
+    "sass": "^1.55.0",
     "typescript": "^4.8.3"
   }
 }
