@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run buildJs & npm run buildTypes & npm run buildSass",
-    "buildJs": "tsc -p ./static/lib/js/tsconfig.json",
-    "buildTypes": "tsc -p ./static/lib/js/tsconfig.json -d -outDir ./@types/ --emitDeclarationOnly",
-    "buildSass": "sass -I ./static/lib/css ./static/lib/css/lib.scss> ./static/lib/css/lib.css && cleancss -o ./static/lib/css/lib.min.css ./static/lib/css/lib.css"
+    "buildJs": "tsc -p ./static/tsconfig.json",
+    "buildTypes": "tsc -p ./static/tsconfig.json -d -outDir ./@types/ --emitDeclarationOnly",
+    "buildSass": "sass -I ./static/css/lib ./static/css/lib/lib.scss> ./static/css/lib/lib.css && cleancss -o ./static/css/lib/lib.min.css ./static/css/lib/lib.css"
   },
   "author": "",
   "license": "ISC",
