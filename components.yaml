@@ -3,3 +3,4 @@ Card: components/card.c.html
 Banner: components/banner.c.html
 TwoUp: components/twoup.c.html
 PageSection: components/pagesection.c.html
+BlogIndex: components/blogindex.c.html

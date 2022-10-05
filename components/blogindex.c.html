@@ -1,0 +1,41 @@
+<Json name="documents" from="$(json)" />
+
+<div class="lib-gallery">
+    <ForEach name="document" in="documents.documents" take="9">
+        <Define name="documentImg" value="$(document.img)" default="static/blog/empty_article.jpg">
+            <div class="lib-gallery-item">
+                <div class="lib-card">
+                    <div class="lib-card-header">
+                        <div class="lib-card-header-main">
+                            <Picture src="$(documentImg)" />
+                        </div>
+                    </div>
+                    <div class="lib-card-title">
+                        <a href="$(document.uri)" style="text-decoration: underline">
+                            $(document.title) by $(document.by)
+                        </a>
+                    </div>
+                    <Optional if="$(document.summary)">
+                        <div class="lib-card-body">
+                            $(document.summary)
+                        </div>
+                    </Optional>
+                    <Optional if="$(document.date)">
+                        <div class="lib-card-footer">
+                            $(document.date)
+                        </div>
+                    </Optional>
+                </div>
+            </div>
+        </Define>
+    </ForEach>
+</div>
+
+<ForEach name="document" in="documents.Documents" skip="9">
+    <Header>
+        <h2>Older posts</h2>
+    </Header>
+    <ItemTemplate>
+        <a href="$(document.uri)">$(document.title) by $(document.by)</a><br />
+    </ItemTemplate>
+</ForEach>

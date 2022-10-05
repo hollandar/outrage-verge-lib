@@ -28,3 +28,7 @@
 .hidden {
   display: none;
 }
+
+.overflow-scroll-h {
+  overflow-y: auto;
+}
