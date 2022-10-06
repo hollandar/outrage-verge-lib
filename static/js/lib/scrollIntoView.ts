@@ -10,7 +10,7 @@ class ScrollIntoView {
     }
 
     init = () => {
-        this.elements = document.querySelectorAll('.scroll-into-view');
+        this.elements = document.querySelectorAll('.lib-scroll-into-view');
         this.windowHeight = window.innerHeight;
     }
 
@@ -20,9 +20,9 @@ class ScrollIntoView {
             var positionFromTop = this.elements[i].getBoundingClientRect().top;
 
             if (positionFromTop - this.windowHeight <= 0) {
-                const animationClass = element.getAttribute("data-animation") ?? "fade-in-element";
+                const animationClass = element.getAttribute("data-animation") ?? "lib-fade-in-element";
                 element.classList.add(animationClass);
-                element.classList.remove('scroll-into-view');
+                element.classList.remove('lib-scroll-into-view');
             }
         }
     }

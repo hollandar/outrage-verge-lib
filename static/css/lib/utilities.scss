@@ -1,7 +1,21 @@
-.hidden {
+.lib-hidden {
     display: none;
 }
 
-.overflow-scroll-h {
+.lib-overflow-scroll-h {
     overflow-y: auto;
+}
+
+.lib-responsive {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.lib-flex-center {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--lib-gap-flexwrap);
 }

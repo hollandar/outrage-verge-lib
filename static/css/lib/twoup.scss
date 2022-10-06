@@ -1,0 +1,33 @@
+.lib-twoup {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "left" "right";
+    gap: var(--patternfly-twoup-gap);
+    margin-bottom: var(--patternfly-component-margin);
+}
+
+@media screen and (min-width: 1024px) {
+    .lib-twoup {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "left right";
+        }
+}
+
+.lib-twoup-left {
+    grid-area: left
+}
+
+.lib-twoup-right {
+    grid-area: right
+}
+
+.lib-twoup-left, .lib-twoup-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow:hidden;
+}
+
