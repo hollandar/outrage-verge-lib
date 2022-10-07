@@ -1,0 +1,25 @@
+:root {
+    --lib-ladder-backdrop-color: black;
+    --lib-ladder-foreground-color: white;
+    --lib-ladder-tranform: scale(104%, 80%) rotate(-2deg) translate(1%, 0);
+}
+
+.lib-ladder {
+    position: relative;
+    display: inline-block;
+    z-index: 0;
+    > * {
+        color: var(--lib-ladder-foreground-color);
+    }
+  }
+  
+.lib-ladder > .lib-ladder-backdrop {
+    position: absolute;
+    z-index: -1;
+    background-color: var(--lib-ladder-backdrop-color);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: var(--lib-ladder-tranform);
+  }

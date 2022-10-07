@@ -1,3 +1,7 @@
+:root {
+    --lib-content-width: 90rem;
+}
+
 .lib-hidden {
     display: none;
 }
@@ -18,4 +22,14 @@
     flex-direction: row;
     justify-content: center;
     gap: var(--lib-gap-flexwrap);
+}
+
+.lib-inline-block {
+    display: inline-block;
+}
+
+.lib-content {
+    max-width: var(--lib-content-width);
+    margin-left: auto;
+    margin-right: auto;
 }
