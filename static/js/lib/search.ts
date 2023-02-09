@@ -131,7 +131,7 @@ class SearchHandler {
             this.search(args);
         });
         this.documentsElement = document.getElementById(this.searchResultsId) as HTMLDivElement;
-        let documentsResponse = await fetch("/static/index/documents.json");
+        let documentsResponse = await fetch("/static/index/documents.json", {cache: "no-cache"});
 
         this.documents = await documentsResponse.json();
     }
@@ -154,7 +154,7 @@ class SearchHandler {
 
             let searchResult: Map<number, number> = new Map<number, number>();
             for (const filename of indexFiles) {
-                let indexRequest = await fetch(filename);
+                let indexRequest = await fetch(filename, {cache: "no-cache"});
                 if (indexRequest.ok) {
                     let index: IndexDocument = await indexRequest.json();
                     index.words.forEach(word => {
